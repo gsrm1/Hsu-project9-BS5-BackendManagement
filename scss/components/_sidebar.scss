@@ -1,0 +1,75 @@
+$sidebar-width: 280px;
+
+//先寫行動版靜態樣式
+.sidebar {
+	width: $sidebar-width;
+	margin-left: -$sidebar-width;
+	transition: margin-left 0.25s;
+	position: fixed;
+	top: 0;
+	//
+	.sidebar-link {
+		color: $dark;
+		display: block;
+		text-decoration: none;
+		padding-top: 0.875rem;
+		padding-bottom: 0.875rem;
+		&:hover {
+			background-color: rgba($primary, 0.16);
+		}
+	}
+	.sidebar-link.active {
+		position: relative;
+		color: $primary !important;
+		background-color: rgba($primary, 0.16);
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 3px;
+			background: $primary;
+		}
+	}
+}
+
+.main {
+	width: 100%;
+}
+
+//js用：展開sidebar(必須放在media-breakpoint-up之前)
+.sidebar-toggled {
+	.sidebar {
+		margin-left: 0;
+	}
+	.main {
+		margin-left: $sidebar-width;
+	}
+}
+
+//後寫桌面板靜態樣式
+//在sass內取用mixin的media-query來設定RWD專用class
+@include media-breakpoint-up(lg) {
+	.sidebar {
+		margin-left: 0;
+	}
+
+	.main {
+		width: calc(100vw - #{$sidebar-width});
+		margin-left: $sidebar-width;
+		transition: margin-left 0.25s;
+		//calc會將內部視為字串故變數無法被正確讀取，這時需加上#{}修正
+	}
+
+	.sidebar-toggled {
+		.sidebar {
+			margin-left: -$sidebar-width;
+		}
+
+		.main {
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+}
