@@ -7,6 +7,7 @@ $sidebar-width: 280px;
 	transition: margin-left 0.25s;
 	position: fixed;
 	top: 0;
+
 	//
 	.sidebar-link {
 		color: $dark;
@@ -14,14 +15,17 @@ $sidebar-width: 280px;
 		text-decoration: none;
 		padding-top: 0.875rem;
 		padding-bottom: 0.875rem;
+
 		&:hover {
 			background-color: rgba($primary, 0.16);
 		}
 	}
+
 	.sidebar-link.active {
 		position: relative;
 		color: $primary !important;
 		background-color: rgba($primary, 0.16);
+
 		&::after {
 			content: "";
 			position: absolute;
@@ -43,6 +47,7 @@ $sidebar-width: 280px;
 	.sidebar {
 		margin-left: 0;
 	}
+
 	.main {
 		margin-left: $sidebar-width;
 	}
