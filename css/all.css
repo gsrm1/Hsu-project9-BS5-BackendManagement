@@ -5579,7 +5579,7 @@ textarea.form-control-lg {
   --bs-list-group-bg: var(--bs-body-bg);
   --bs-list-group-border-color: var(--bs-border-color);
   --bs-list-group-border-width: var(--bs-border-width);
-  --bs-list-group-border-radius: var(--bs-border-radius);
+  --bs-list-group-border-radius: 0.75rem;
   --bs-list-group-item-padding-x: 1rem;
   --bs-list-group-item-padding-y: 0.5rem;
   --bs-list-group-action-color: var(--bs-secondary-color);
@@ -13402,4 +13402,4 @@ textarea.form-control-lg {
     width: 100%;
     margin-left: 0;
   }
-}/*# sourceMappingURL=bootstrap.css.map */
+}/*# sourceMappingURL=all.css.map */
