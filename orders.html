@@ -24,7 +24,6 @@
               <i class="bi bi-house pe-2"></i>首頁
             </div>
           </a>
-
           <div>
             <a href="#menu-order" class="sidebar-link" data-bs-toggle="collapse">
               <div class="d-flex justify-content-between px-4">
@@ -61,15 +60,15 @@
         </div>
       </a>
     </aside>
+    
     <main class="main">
       <div class="bg-white w-100 border-bottom sticky-top">
         <a href="#" class="py-3 px-4 d-inline-block border-end" id="toggle-btn">
           <i class="bi bi-arrows-angle-expand"></i></a>
       </div>
 
-      <!-- 主要內容 -->
+      <!-- 4.主要內容 -->
       <div class="p-4">
-        
         <!-- nav -->
         <ul class="nav nav-pills mb-4">
           <li class="nav-item">
@@ -142,8 +141,8 @@
                       <div class="btn-group">
                         <a href="#" class="btn btn-sm btn-outline-dark">
                           編輯 <i class="bi bi-pen"></i></a>
-                        <button class="btn btn-sm btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                          aria-expanded="false">
+                        <button class="btn btn-sm btn-outline-dark dropdown-toggle" type="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
                           操作
                         </button>
                         <ul class="dropdown-menu">
@@ -169,8 +168,8 @@
                       <div class="btn-group">
                         <a href="#" class="btn btn-sm btn-outline-dark">
                           編輯 <i class="bi bi-pen"></i></a>
-                        <button class="btn btn-sm btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                          aria-expanded="false">
+                        <button class="btn btn-sm btn-outline-dark dropdown-toggle" type="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
                           操作
                         </button>
                         <ul class="dropdown-menu">
@@ -196,8 +195,8 @@
                       <div class="btn-group">
                         <a href="#" class="btn btn-sm btn-outline-dark">
                           編輯 <i class="bi bi-pen"></i></a>
-                        <button class="btn btn-sm btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                          aria-expanded="false">
+                        <button class="btn btn-sm btn-outline-dark dropdown-toggle" type="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
                           操作
                         </button>
                         <ul class="dropdown-menu">
@@ -207,7 +206,7 @@
                       </div>
                     </td>
                   </tr>
-                  <tr>
+                  <tr class="">
                     <td class="ps-4">
                       <input type="checkbox" class="form-check-input">
                     </td>
@@ -223,13 +222,14 @@
                       <div class="btn-group">
                         <a href="#" class="btn btn-sm btn-outline-dark">
                           編輯 <i class="bi bi-pen"></i></a>
-                        <button class="btn btn-sm btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                          aria-expanded="false">
+                        <button class="btn btn-warning btn-sm btn-outline-dark dropdown-toggle" type="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
                           操作
                         </button>
                         <ul class="dropdown-menu">
                           <li><a class="dropdown-item" href="#">修改狀態</a></li>
-                          <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-order-id="TX123456789">刪除訂單</a></li>
+                          <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal"
+                              data-bs-target="#deleteModal" data-bs-order-id="TX123456789">刪除訂單</a></li>
                         </ul>
                       </div>
                     </td>
@@ -275,9 +275,7 @@
               const orderId = button.dataset.bsOrderId;
               const modalText = modalByDelete.querySelector('#deleteText')
               modalText.textContent = orderId
-              
-              
-              })
+            })
           </script>
 
         </div>
