@@ -55,7 +55,7 @@ $sidebar-width: 280px;
 
 //後寫桌面板靜態樣式
 //在sass內取用mixin的media-query來設定RWD專用class
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(md) {
 	.sidebar {
 		margin-left: 0;
 	}

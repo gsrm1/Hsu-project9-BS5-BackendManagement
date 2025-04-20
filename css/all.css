@@ -11685,7 +11685,7 @@ textarea.form-control-lg {
   z-index: 1;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .sidebar {
     margin-left: 0;
   }
