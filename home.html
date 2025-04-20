@@ -14,16 +14,12 @@
     <aside class="sidebar vh-100 border-end pt-3 d-flex bg-white flex-column">
       <!-- 1.後台名稱 -->
       <div class="px-4">
-        <strong>六角西餐廳</strong>- 後台管理
+        <h1 class="h5"><strong>Jojo西餐廳</strong>- 後台管理</h1>
       </div>
       <!-- 2.選單 -->
       <div class="overflow-auto mt-3">
         <div>
-          <a href="home.html" class="sidebar-link">
-            <div class="px-4">
-              <i class="bi bi-house pe-2"></i>首頁
-            </div>
-          </a>
+          <a href="home.html" class="sidebar-link px-4"><i class="bi bi-house pe-2"></i>首頁</a>
           <div>
             <a href="#menu-order" class="sidebar-link" data-bs-toggle="collapse">
               <div class="d-flex justify-content-between px-4">
@@ -54,15 +50,11 @@
         </div>
       </div>
       <!-- 3.登出按鈕 -->
-      <a href="#" class="mt-auto sidebar-link">
-        <div class="px-4">
-          登出
-        </div>
-      </a>
+      <a href="#" class="mt-auto sidebar-link px-4">登出</a>
     </aside>
 
     <main class="main">
-      <div class="bg-white w-100 border-bottom sticky-top">
+      <div class="toggle-btn bg-white w-100 border-bottom sticky-top">
         <a href="#" class="py-3 px-4 d-inline-block border-end" id="toggle-btn">
           <i class="bi bi-arrows-angle-expand"></i></a>
       </div>
@@ -143,7 +135,7 @@
                         <td scope="row" class="ps-4">TX123456789</td>
                         <td>a123@anymail.com</td>
                         <td>Jojo</td>
-                        <td>六角西餐：大麥克全家餐</td>
+                        <td>Jojo西餐：大麥克全家餐</td>
                         <td>
                           <div class="text-muted">尚未付款</div>
                         </td>
@@ -210,15 +202,17 @@
                   chartColors.yellow,
                   chartColors.green,
                   chartColors.blue,
+                  chartColors.purple,
                 ],
                 label: 'Dataset 1'
               }],
               labels: [
-                '大麥克全餐',
-                '肥宅快樂水',
-                '太爽啦義大利麵',
-                '薯條加大吃不完',
-                '兒童餐椅不給坐',
+                'Jojo西餐廳',
+                '雙層純牛肉',
+                '獨特醬料加生菜',
+                '吉士洋蔥雙黃瓜',
+                '芝麻麵包蓋上去',
+                '好吃過癮麥香飽',
               ]
             },
             options: {

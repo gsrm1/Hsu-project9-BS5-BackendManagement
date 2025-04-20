@@ -7,9 +7,7 @@ $sidebar-width: 280px;
 	transition: margin-left 0.25s;
 	position: fixed;
 	top: 0;
-
-	//
-	.sidebar-link {
+	&-link {
 		color: $dark;
 		display: block;
 		text-decoration: none;
@@ -21,7 +19,7 @@ $sidebar-width: 280px;
 		}
 	}
 
-	.sidebar-link.active {
+	&-link.active {
 		position: relative;
 		color: $primary !important;
 		background-color: rgba($primary, 0.16);
@@ -46,10 +44,12 @@ $sidebar-width: 280px;
 .sidebar-toggled {
 	.sidebar {
 		margin-left: 0;
+		z-index: 100;
 	}
 
-	.main {
+	.toggle-btn {
 		margin-left: $sidebar-width;
+		z-index: 1;
 	}
 }
 
@@ -72,8 +72,11 @@ $sidebar-width: 280px;
 			margin-left: -$sidebar-width;
 		}
 
-		.main {
+		.main{
 			width: 100%;
+			margin-left: 0;
+		}
+		.toggle-btn {
 			margin-left: 0;
 		}
 	}
