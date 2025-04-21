@@ -7,6 +7,7 @@ $sidebar-width: 280px;
 	transition: margin-left 0.25s;
 	position: fixed;
 	top: 0;
+
 	&-link {
 		color: $dark;
 		display: block;
@@ -40,16 +41,15 @@ $sidebar-width: 280px;
 	width: 100%;
 }
 
-//js用：展開sidebar(必須放在media-breakpoint-up之前)
+//js用：展開sidebar
 .sidebar-toggled {
 	.sidebar {
 		margin-left: 0;
-		z-index: 100;
+		z-index: 10; //覆蓋在main上避免推擠產生x軸
 	}
 
 	.toggle-btn {
 		margin-left: $sidebar-width;
-		z-index: 1;
 	}
 }
 
@@ -72,10 +72,11 @@ $sidebar-width: 280px;
 			margin-left: -$sidebar-width;
 		}
 
-		.main{
+		.main {
 			width: 100%;
 			margin-left: 0;
 		}
+
 		.toggle-btn {
 			margin-left: 0;
 		}

@@ -11678,11 +11678,10 @@ textarea.form-control-lg {
 
 .sidebar-toggled .sidebar {
   margin-left: 0;
-  z-index: 100;
+  z-index: 10;
 }
 .sidebar-toggled .toggle-btn {
   margin-left: 280px;
-  z-index: 1;
 }
 
 @media (min-width: 768px) {
