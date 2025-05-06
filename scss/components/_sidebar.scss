@@ -61,7 +61,8 @@ $sidebar-width: 280px;
 	}
 
 	.main {
-		width: calc(100vw - #{$sidebar-width});
+		// 將原100vw改成100%以解決main下y軸bar空間導致產生x軸問題(因為viewport可顯示的區塊不包含 垂直 scollBar 的寬度 )
+		width: calc(100% - #{$sidebar-width});
 		margin-left: $sidebar-width;
 		transition: margin-left 0.25s;
 		//calc會將內部視為字串故變數無法被正確讀取，這時需加上#{}修正
