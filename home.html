@@ -1,303 +1,316 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BS5 practice | 農場管理網</title>
+		<link rel="stylesheet" href="./dist/style/all.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+		/>
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BS5 practice | 後台管理</title>
-  <link rel="stylesheet" href="./dist/style/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-</head>
+	<body>
+		<div class="d-flex">
+			<aside class="sidebar vh-100 border-end pt-3 d-flex bg-white flex-column">
+				<!-- 1.後台名稱 -->
+				<div class="px-4">
+					<h1 class="h5"><strong>農場管理網</strong>- 後台</h1>
+				</div>
+				<!-- 2.選單 -->
+				<div class="overflow-auto mt-3">
+					<a href="home.html" class="sidebar-link px-4"
+						><i class="bi bi-house pe-2"></i>農場概況</a
+					>
+					<div>
+						<a
+							href="#menu-order"
+							class="sidebar-link"
+							data-bs-toggle="collapse"
+						>
+							<div class="d-flex justify-content-between px-4">
+								<p class="mb-0">
+									<i class="bi bi-card-checklist pe-2"></i>管理後台
+								</p>
+								<i class="bi bi-caret-down"></i>
+							</div>
+						</a>
+						<div class="collapse" id="menu-order">
+							<a href="orders.html" class="sidebar-link">
+								<div class="ps-5">農肥料管理</div>
+							</a>
+							<a href="order.html" class="sidebar-link">
+								<div class="ps-5">客戶訂單</div>
+							</a>
+						</div>
+						<a href="#" class="sidebar-link">
+							<div class="px-4"><i class="bi bi-list-check pe-2"></i>其他</div>
+						</a>
+					</div>
+				</div>
+				<!-- 3.登出按鈕 -->
+				<a href="#" class="mt-auto sidebar-link px-4">登出</a>
+			</aside>
 
-<body>
-  <div class="d-flex">
-    <aside class="sidebar vh-100 border-end pt-3 d-flex bg-white flex-column">
-      <!-- 1.後台名稱 -->
-      <div class="px-4">
-        <h1 class="h5"><strong>Jojo西餐廳</strong>- 後台管理</h1>
-      </div>
-      <!-- 2.選單 -->
-      <div class="overflow-auto mt-3">
-        <a href="home.html" class="sidebar-link px-4"><i class="bi bi-house pe-2"></i>首頁</a>
-        <div>
-          <a href="#menu-order" class="sidebar-link" data-bs-toggle="collapse">
-            <div class="d-flex justify-content-between px-4">
-              <p class="mb-0">
-                <i class="bi bi-card-checklist pe-2"></i>訂單管理
-              </p>
-              <i class="bi bi-caret-down"></i>
-            </div>
-          </a>
-          <div class="collapse" id="menu-order">
-            <a href="orders.html" class="sidebar-link">
-              <div class="ps-5">
-                訂單列表
-              </div>
-            </a>
-            <a href="order.html" class="sidebar-link">
-              <div class="ps-5">
-                單一訂單細節
-              </div>
-            </a>
-          </div>
-          <a href="#" class="sidebar-link">
-            <div class="px-4">
-              <i class="bi bi-list-check pe-2"></i>參考連結
-            </div>
-          </a>
-        </div>
-      </div>
-      <!-- 3.登出按鈕 -->
-      <a href="#" class="mt-auto sidebar-link px-4">登出</a>
-    </aside>
+			<!-- 添加overflow-hidden消除x軸 -->
+			<main class="main">
+				<div class="toggle-btn bg-white w-auto border-bottom sticky-top">
+					<a
+						href="#"
+						class="py-3 px-4 d-inline-block border-end"
+						id="toggle-btn"
+					>
+						<i class="bi bi-arrows-angle-expand"></i
+					></a>
+				</div>
 
-    <!-- 添加overflow-hidden消除x軸 -->
-    <main class="main">
-      <div class="toggle-btn bg-white w-auto border-bottom sticky-top">
-        <a href="#" class="py-3 px-4 d-inline-block border-end" id="toggle-btn">
-          <i class="bi bi-arrows-angle-expand"></i></a>
-      </div>
+				<!-- 4.主要內容 -->
+				<div class="p-4">
+					<div class="row g-4 mb-4">
+						<div class="col-6 col-md-6 col-lg-4">
+							<div class="card shadow-sm h-100">
+								<div class="card-body text-end">
+									<h2 class="display-6">目前溫度</h2>
+									<p class="display-5 mb-0">28℃</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-6 col-lg-4">
+							<div class="card shadow-sm h-100">
+								<div class="card-body text-end">
+									<h2 class="display-6">降雨機率</h2>
+									<p class="display-5 mb-0">35%</p>
+								</div>
+							</div>
+						</div>
+						<div class="col col-md-12 col-lg-4">
+							<div class="card shadow-sm h-100">
+								<div class="card-body text-end">
+									<h2 class="display-6">光照</h2>
+									<p class="display-5 mb-0">16,200Lux</p>
+								</div>
+							</div>
+						</div>
+					</div>
 
-      <!-- 4.主要內容 -->
-      <div class="p-4">
-        <div class="row g-4 mb-4">
-          <div class="col-6 col-md-6 col-lg-4">
-            <div class="card shadow-sm h-100">
-              <div class="card-body text-end">
-                <h2 class="display-6">在線人數</h2>
-                <p class="display-5 mb-0">3,123</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-md-6 col-lg-4">
-            <div class="card shadow-sm h-100">
-              <div class="card-body text-end">
-                <h2 class="display-6">訂單數</h2>
-                <p class="display-5 mb-0">1,123</p>
-              </div>
-            </div>
-          </div>
-          <div class="col col-md-12 col-lg-4">
-            <div class="card shadow-sm h-100">
-              <div class="card-body text-end">
-                <h2 class="display-6">營業額</h2>
-                <p class="display-5 mb-0">NT$204,123</p>
-              </div>
-            </div>
-          </div>
-        </div>
+					<div class="row g-4 mb-4">
+						<div class="col-lg-4">
+							<div class="card shadow-sm h-100">
+								<div class="card-body">
+									<canvas id="pie-chart" class="img-fluid"></canvas>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card shadow-sm h-100">
+								<div class="card-body">
+									<canvas id="bar-chart" class="img-fluid"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
 
-        <div class="row g-4 mb-4">
-          <div class="col-lg-4">
-            <div class="card shadow-sm h-100">
-              <div class="card-body">
-                <canvas id="pie-chart" class="img-fluid"></canvas>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm h-100">
-              <div class="card-body">
-                <canvas id="bar-chart" class="img-fluid"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
+					<!-- 因滿寬排版不需要格線系統 -->
+					<!-- <div class="row"> -->
+					<!-- <div class="col-12"> -->
+					<div class="card shadow-sm">
+						<div class="card-header bg-transparent">
+							<div class="input-group">
+								<span class="input-group-text border-0 bg-transparent pe-0">
+									<i class="bi bi-search"></i>
+								</span>
+								<input
+									type="search"
+									id="searchBar"
+									class="form-control border-0 shadow-none"
+									placeholder="Search"
+								/>
+							</div>
+						</div>
+						<div class="card-body p-0">
+							<div class="table-responsive">
+								<table class="table table-hover mb-0">
+									<thead class="bg-light">
+										<tr class="align-middle">
+											<th scope="col" class="py-3 ps-4">農場分區</th>
+											<th scope="col">負責人</th>
+											<th scope="col">主作物</th>
+											<th scope="col">栽種面積</th>
+											<th scope="col">人力配置</th>
+											<th scope="col">育種計畫</th>
+											<th scope="col" class="pe-4">編輯</th>
+										</tr>
+									</thead>
+									<tbody class="text-nowrap">
+										<tr>
+											<td scope="row" class="ps-4">A區</td>
+											<td>Howard Hsu</td>
+											<td>水稻</td>
+											<td>30公頃</td>
+											<td>
+												<div class="text-muted">7名</div>
+											</td>
+											<td class="text-end">苗期耐旱計畫</td>
+											<td class="text-end pe-4">
+												<a href="#" class="btn btn-sm btn-outline-dark me-2">
+													編輯 <i class="bi bi-pen"></i>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td scope="row" class="ps-4">B區</td>
+											<td>Jason Chou</td>
+											<td>木瓜</td>
+											<td>12公頃</td>
+											<td>
+												<div class="text-muted">9名</div>
+											</td>
+											<td class="text-end">抗PRSV計畫</td>
+											<td class="text-end pe-4">
+												<a href="#" class="btn btn-sm btn-outline-dark me-2">
+													編輯 <i class="bi bi-pen"></i>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td scope="row" class="ps-4">B-2區</td>
+											<td>Annie Hsiao</td>
+											<td>蝴蝶蘭</td>
+											<td>5分(玻璃溫室)</td>
+											<td>
+												<div class="text-muted">12名</div>
+											</td>
+											<td class="text-end">無</td>
+											<td class="text-end pe-4">
+												<a href="#" class="btn btn-sm btn-outline-dark me-2">
+													編輯 <i class="bi bi-pen"></i>
+												</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="card-footer bg-transparent py-3">
+							<nav aria-label="Page navigation example">
+								<ul class="pagination justify-content-end mb-0">
+									<li class="page-item">
+										<a class="page-link" href="#">Previous</a>
+									</li>
+									<li class="page-item"><a class="page-link" href="#">1</a></li>
+									<li class="page-item"><a class="page-link" href="#">2</a></li>
+									<li class="page-item"><a class="page-link" href="#">3</a></li>
+									<li class="page-item">
+										<a class="page-link" href="#">Next</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<!-- </div> -->
+					<!-- </div> -->
+				</div>
 
-        <!-- 因滿寬排版不需要格線系統 -->
-        <!-- <div class="row"> -->
-        <!-- <div class="col-12"> -->
-        <div class="card shadow-sm">
-          <div class="card-header bg-transparent">
-            <div class="input-group">
-              <span class="input-group-text border-0 bg-transparent pe-0">
-                <i class="bi bi-search"></i>
-              </span>
-              <input type="search" id="searchBar" class="form-control border-0 shadow-none" placeholder="Search">
-            </div>
-          </div>
-          <div class="card-body p-0">
-            <div class="table-responsive">
-              <table class="table table-hover mb-0">
-                <thead class="bg-light">
-                  <tr class="align-middle">
-                    <th scope="col" class="py-3 ps-4">訂單編號</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">用戶姓名</th>
-                    <th scope="col">購買品項</th>
-                    <th scope="col">付款狀態</th>
-                    <th scope="col">購買金額</th>
-                    <th scope="col" class="pe-4">編輯</th>
-                  </tr>
-                </thead>
-                <tbody class="text-nowrap">
-                  <tr>
-                    <td scope="row" class="ps-4">TX111111111</td>
-                    <td>a123@anymail.com</td>
-                    <td>Jojo</td>
-                    <td>Jojo西餐：大麥克全家餐</td>
-                    <td>
-                      <div class="text-muted">尚未付款</div>
-                    </td>
-                    <td class="text-end">1,123</td>
-                    <td class="text-end pe-4"><a href="#" class="btn btn-sm btn-outline-dark me-2">
-                        編輯 <i class="bi bi-pen"></i>
-                      </a></td>
-                  </tr>
-                  <tr>
-                    <td scope="row" class="ps-4">TX222222222</td>
-                    <td>a123@anymail.com</td>
-                    <td>Jojo</td>
-                    <td>Jojo西餐：黯然銷魂西點</td>
-                    <td>
-                      <div class="text-muted">尚未付款</div>
-                    </td>
-                    <td class="text-end">2,123</td>
-                    <td class="text-end pe-4"><a href="#" class="btn btn-sm btn-outline-dark me-2">
-                        編輯 <i class="bi bi-pen"></i>
-                      </a></td>
-                  </tr>
-                  <tr>
-                    <td scope="row" class="ps-4">TX123456789</td>
-                    <td>a123@anymail.com</td>
-                    <td>Jojo</td>
-                    <td>Jojo西餐：黃金五寶飯</td>
-                    <td>
-                      <div class="text-muted">尚未付款</div>
-                    </td>
-                    <td class="text-end">3,123</td>
-                    <td class="text-end pe-4"><a href="#" class="btn btn-sm btn-outline-dark me-2">
-                        編輯 <i class="bi bi-pen"></i>
-                      </a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="card-footer bg-transparent py-3">
-            <nav aria-label="Page navigation example">
-              <ul class="pagination justify-content-end mb-0">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <!-- </div> -->
-        <!-- </div> -->
-      </div>
+				<!-- chart.js套件 -->
+				<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+				<script>
+					;(() => {
+						const chartColors = {
+							red: 'rgb(255, 99, 132)',
+							orange: 'rgb(255, 159, 64)',
+							yellow: 'rgb(255, 205, 86)',
+							green: 'rgb(75, 192, 192)',
+							blue: 'rgb(54, 162, 235)',
+							purple: 'rgb(153, 102, 255)',
+							grey: 'rgb(201, 203, 207)',
+						}
+						var randomScalingFactor = function () {
+							return Math.round(Math.random() * 4000)
+						}
 
-      <!-- chart.js套件 -->
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      <script>
-        (() => {
-          const chartColors = {
-            red: 'rgb(255, 99, 132)',
-            orange: 'rgb(255, 159, 64)',
-            yellow: 'rgb(255, 205, 86)',
-            green: 'rgb(75, 192, 192)',
-            blue: 'rgb(54, 162, 235)',
-            purple: 'rgb(153, 102, 255)',
-            grey: 'rgb(201, 203, 207)'
-          };
-          var randomScalingFactor = function () {
-            return Math.round(Math.random() * 2000000);
-          };
+						const pieCtx = document.getElementById('pie-chart').getContext('2d')
+						const barCtx = document.getElementById('bar-chart').getContext('2d')
 
-          const pieCtx = document.getElementById('pie-chart').getContext('2d');
-          const barCtx = document.getElementById('bar-chart').getContext('2d');
+						const config = {
+							type: 'pie',
+							data: {
+								datasets: [
+									{
+										data: [
+											randomScalingFactor(),
+											randomScalingFactor(),
+											randomScalingFactor(),
+											randomScalingFactor(),
+											randomScalingFactor(),
+											randomScalingFactor(),
+										],
+										backgroundColor: [
+											chartColors.red,
+											chartColors.orange,
+											chartColors.yellow,
+											chartColors.green,
+											chartColors.blue,
+											chartColors.purple,
+										],
+										label: '作物分佈',
+									},
+								],
+								labels: ['水稻', '陸稻', '玉米', '蝴蝶蘭', '綠肥大豆', '木瓜'],
+							},
+							options: {
+								responsive: true,
+							},
+						}
+						const barConfig = {
+							type: 'bar',
+							data: {
+								datasets: [
+									{
+										data: [
+											randomScalingFactor(),
+											randomScalingFactor(),
+											randomScalingFactor(),
+											randomScalingFactor(),
+											randomScalingFactor(),
+											randomScalingFactor(),
+										],
+										backgroundColor: [
+											chartColors.red,
+											chartColors.orange,
+											chartColors.yellow,
+											chartColors.green,
+											chartColors.blue,
+											chartColors.purple,
+										],
+										label: '農場月均降雨量(毫米)',
+									},
+								],
+								labels: ['一月', '二月', '三月', '四月', '五月', '六月'],
+							},
+							options: {
+								responsive: true,
+							},
+						}
+						const pieChart = new Chart(pieCtx, config)
+						const barChart = new Chart(barCtx, barConfig)
 
-          const config = {
-            type: 'pie',
-            data: {
-              datasets: [{
-                data: [
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                ],
-                backgroundColor: [
-                  chartColors.red,
-                  chartColors.orange,
-                  chartColors.yellow,
-                  chartColors.green,
-                  chartColors.blue,
-                  chartColors.purple,
-                ],
-                label: 'Dataset 1'
-              }],
-              labels: [
-                'Jojo西餐廳',
-                '雙層純牛肉',
-                '獨特醬料加生菜',
-                '吉士洋蔥雙黃瓜',
-                '芝麻麵包蓋上去',
-                '好吃過癮麥香飽',
-              ]
-            },
-            options: {
-              responsive: true
-            }
-          };
-          const barConfig = {
-            type: 'bar',
-            data: {
-              datasets: [{
-                data: [
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                  randomScalingFactor(),
-                ],
-                backgroundColor: [
-                  chartColors.red,
-                  chartColors.orange,
-                  chartColors.yellow,
-                  chartColors.green,
-                  chartColors.blue,
-                  chartColors.purple,
-                ],
-                label: 'Dataset 1'
-              }],
-              labels: [
-                '一月',
-                '二月',
-                '三月',
-                '四月',
-                '五月',
-                '六月',
-              ]
-            },
-            options: {
-              responsive: true
-            }
-          };
-          const pieChart = new Chart(pieCtx, config);
-          const barChart = new Chart(barCtx, barConfig);
+						// 監聽使圖表在視窗大小變化後重新調整尺寸
+						window.addEventListener('resize', () => {
+							pieChart.resize()
+							barChart.resize()
+						})
+					})()
+				</script>
+			</main>
+		</div>
 
-          // 監聽使圖表在視窗大小變化後重新調整尺寸
-          window.addEventListener('resize', () => {
-            pieChart.resize();
-            barChart.resize();
-          });
-        })();
-      </script>
-    </main>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-    crossorigin="anonymous"></script>
-  <!-- 自定義js -->
-  <script src="./javascripts/all.js"></script>
-</body>
-
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+			crossorigin="anonymous"
+		></script>
+		<!-- 自定義js -->
+		<script src="./javascripts/all.js"></script>
+	</body>
 </html>
